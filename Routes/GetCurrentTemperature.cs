@@ -2,19 +2,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace projeto_ruim.Routes;
 
-public static class GetCurrentTemperature
+public class GetCurrentTemperature : IHttpRoute
 {
-    public static WebApplication RegisterEndpointGetCurrentTemperature(this WebApplication app)
-    {
-        app.MapGet("/current-temperature", (string where) =>
-                new {
-                    when = DateTimeOffset.UtcNow,
-                    where,
-                    temperatureC = "38.5 C°"
-                }
-            ).WithName("GetCurrentTemperature")
-            .WithOpenApi();
+    public HttpVerb Verb { get; init; } = HttpVerb.GET;
 
-        return app;
-    }
+    public string TemplateRoute { get; init; } = "/current-temperature";
+
+    public Delegate Handler { get; init; } = (string where) =>
+        new
+        {
+            when = DateTimeOffset.UtcNow,
+            where,
+            temperatureC = "38.5 C°"
+        };
 }

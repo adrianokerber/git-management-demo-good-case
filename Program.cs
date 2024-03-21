@@ -1,3 +1,4 @@
+using projeto_ruim.Configurations;
 using projeto_ruim.Routes;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +21,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // Register Endpoints:
-app.RegisterEndpointGetWeatherForecast()
-   .RegisterEndpointGetCurrentTemperature();
+app.RegisterRoute(new GetWeatherForecast())
+   .RegisterRoute(new GetCurrentTemperature());
 
 app.Run();
