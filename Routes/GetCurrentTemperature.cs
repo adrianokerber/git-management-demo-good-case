@@ -6,10 +6,10 @@ public static class GetCurrentTemperature
 {
     public static WebApplication RegisterEndpointGetCurrentTemperature(this WebApplication app)
     {
-        app.MapGet("/current-temperature/{where}", ([FromRoute] string where) =>
+        app.MapGet("/current-temperature", (string where) =>
                 new {
                     when = DateTimeOffset.UtcNow,
-                    city = where,
+                    where,
                     temperatureC = "38.5 C°"
                 }
             ).WithName("GetCurrentTemperature")
