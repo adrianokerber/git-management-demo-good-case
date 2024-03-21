@@ -15,10 +15,10 @@ Temos um quadro do time onde gerenciamos as atividades no fluxo de trabalho, pri
 Dado o quadro e histórico do git exibidos nas imagens abaixo o que você entende?
 
 Quadro do time:
-![Board do Time.png](.docs/assets/board_view_bad_case.png)
+![Board do Time.png](.docs/assets/board_view_good_case.png)
 
 Histórico do Git:
-![Histórico GIT](.docs/assets/git_history_bad_case.png)
+![Histórico GIT](.docs/assets/git_history_good_case.png)
 
 Elaborando um pouco mais:
 
@@ -64,3 +64,6 @@ Conforme já dito acima, com este padrão de commits e um uso controlado de `git
 - (+) Rastreio de demandas claro
 - (+) Propósito de alterações claro
 - (-) Tempo na criação de mensagem de commit mais alto
+
+Referências:
+- [Quadro do time](https://github.com/users/adrianokerber/projects/4/views/1)
