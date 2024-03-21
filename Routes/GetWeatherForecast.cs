@@ -8,7 +8,7 @@ public class GetWeatherForecast : IHttpRoute
     };
 
     public HttpVerb Verb { get; init; } = HttpVerb.GET;
-    public string TemplateRoute { get; init; } = "/weatherforecast";
+    public string TemplateRoute { get; init; } = "/weather-forecast";
 
     public Delegate Handler { get; init; } = () =>
     {
